@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{476BAED6-F52F-4B73-91D5-75095DF4136A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>STARC.Domain</RootNamespace>
+    <AssemblyName>STARC.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\TestCase.cs" />
+    <Compile Include="Entities\TestPlan.cs" />
+    <Compile Include="Entities\TestSuite.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserProfile.cs" />
+    <Compile Include="Entities\UsersInProjects.cs" />
+    <Compile Include="Interfaces\AppServices\IPasswordAppService.cs" />
+    <Compile Include="Interfaces\AppServices\ITestCaseAppService.cs" />
+    <Compile Include="Interfaces\AppServices\ITestPlanAppService.cs" />
+    <Compile Include="Interfaces\AppServices\ITestSuiteAppService.cs" />
+    <Compile Include="Interfaces\AppServices\IUserProfileAppService.cs" />
+    <Compile Include="Interfaces\AppServices\IUsersInProjectsAppService.cs" />
+    <Compile Include="Interfaces\Repositories\IPasswordRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITestCaseRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITestPlanRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITestSuiteRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserProfileRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUsersInProjectsRepository.cs" />
+    <Compile Include="Models\EntityValidationResult.cs" />
+    <Compile Include="Interfaces\AppServices\ICustomerAppService.cs" />
+    <Compile Include="Interfaces\AppServices\IProjectAppService.cs" />
+    <Compile Include="Interfaces\AppServices\IUserAppService.cs" />
+    <Compile Include="Interfaces\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProjectRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserRepository.cs" />
+    <Compile Include="Models\HashPassword.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Customers\CustomerToQueryViewModel.cs" />
+    <Compile Include="ViewModels\Customers\CustomerToInsertViewModel.cs" />
+    <Compile Include="ViewModels\Customers\CustomerToUpdateViewModel.cs" />
+    <Compile Include="ViewModels\Projects\ProjectToQueryViewModel.cs" />
+    <Compile Include="ViewModels\Projects\ProjectToInsertViewModel.cs" />
+    <Compile Include="ViewModels\Projects\ProjectToUpdateViewModel.cs" />
+    <Compile Include="ViewModels\TestCase\TestCaseToQueryViewModel.cs" />
+    <Compile Include="ViewModels\TestCase\TestCaseToInsertViewModel.cs" />
+    <Compile Include="ViewModels\TestCase\TestCaseToUpdateViewModel.cs" />
+    <Compile Include="ViewModels\TestPlan\TestPlanStructureViewModel.cs" />
+    <Compile Include="ViewModels\TestPlan\TestPlanToQueryViewModel.cs" />
+    <Compile Include="ViewModels\TestPlan\TestPlanToInsertViewModel.cs" />
+    <Compile Include="ViewModels\TestPlan\TestPlanToUpdateViewModel.cs" />
+    <Compile Include="ViewModels\TestSuite\TestSuiteToQueryViewModel.cs" />
+    <Compile Include="ViewModels\TestSuite\TestSuiteToInsertViewModel.cs" />
+    <Compile Include="ViewModels\TestSuite\TestSuiteToUpdateViewModel.cs" />
+    <Compile Include="ViewModels\UsersInProjects\UsersInProjectsToQueryViewModel.cs" />
+    <Compile Include="ViewModels\UsersInProjects\UsersInProjectsToInsertViewModel.cs" />
+    <Compile Include="ViewModels\Users\UserToQueryViewModel.cs" />
+    <Compile Include="ViewModels\Users\UserToInsertViewModel.cs" />
+    <Compile Include="ViewModels\Users\UserToUpdateViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.csprojResolveAssemblyReference.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.exe.config
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.csproj.CoreCompileInputs.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.AssemblyInfoInputs.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.AssemblyInfo.cs
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.exe
+C:\Users\rgoes\source\repos\starc-40\STARC.Api\obj\Debug\net451\win7-x86\STARC.Api.pdb

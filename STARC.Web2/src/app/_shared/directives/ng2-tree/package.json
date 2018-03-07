@@ -1,0 +1,162 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng2-tree",
+        "scope": null,
+        "escapedName": "ng2-tree",
+        "name": "ng2-tree",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\rgoes\\Source\\Workspaces\\STARC_4_0\\src\\STARC\\STARC.Web2"
+    ]
+  ],
+  "_from": "ng2-tree@latest",
+  "_id": "ng2-tree@2.0.0-alpha.8",
+  "_inCache": true,
+  "_location": "/ng2-tree",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ng2-tree-2.0.0-alpha.8.tgz_1499003113501_0.3661069464869797"
+  },
+  "_npmUser": {
+    "name": "rychkog",
+    "email": "rychko.georgiy@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ng2-tree",
+    "scope": null,
+    "escapedName": "ng2-tree",
+    "name": "ng2-tree",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng2-tree/-/ng2-tree-2.0.0-alpha.8.tgz",
+  "_shasum": "3ddbc2bc5e2d77f7f5c686d38eebd6048504be3f",
+  "_shrinkwrap": null,
+  "_spec": "ng2-tree",
+  "_where": "C:\\Users\\rgoes\\Source\\Workspaces\\STARC_4_0\\src\\STARC\\STARC.Web2",
+  "author": {
+    "name": "Georgii Rychko",
+    "email": "rychko.georgiy@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/valor-software/ng2-tree/issues"
+  },
+  "dependencies": {},
+  "description": "angular2 component for visualizing data that can be naturally represented as a tree",
+  "devDependencies": {
+    "@angular/cli": "1.1.1",
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/language-service": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@angular/router": "4.1.3",
+    "@types/jasmine": "2.5.51",
+    "@types/node": "7.0.29",
+    "alertifyjs": "1.10.0",
+    "codelyzer": "3.0.1",
+    "conventional-changelog": "1.1.3",
+    "conventional-changelog-cli": "1.3.1",
+    "conventional-github-releaser": "1.1.11",
+    "core-js": "2.4.1",
+    "font-awesome": "4.7.0",
+    "gh-pages": "1.0.0",
+    "jasmine-core": "2.6.3",
+    "jasmine-data-provider": "2.2.0",
+    "jasmine-spec-reporter": "4.1.0",
+    "karma": "1.7.0",
+    "karma-chrome-launcher": "2.1.1",
+    "karma-cli": "1.0.1",
+    "karma-coverage-istanbul-reporter": "1.3.0",
+    "karma-jasmine": "1.1.0",
+    "karma-jasmine-html-reporter": "0.2.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "phantomjs-polyfill": "0.0.2",
+    "phantomjs-prebuilt": "2.1.14",
+    "pre-commit": "1.2.2",
+    "protractor": "5.1.2",
+    "rimraf": "2.6.1",
+    "rxjs": "5.4.0",
+    "shelljs": "0.7.8",
+    "systemjs-builder": "0.16.6",
+    "ts-node": "3.0.6",
+    "tslint": "5.4.3",
+    "tslint-config-valorsoft": "2.0.1",
+    "typescript": "2.3.4",
+    "webpack": "2.6.1",
+    "zone.js": "0.8.12"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "3ddbc2bc5e2d77f7f5c686d38eebd6048504be3f",
+    "tarball": "https://registry.npmjs.org/ng2-tree/-/ng2-tree-2.0.0-alpha.8.tgz"
+  },
+  "homepage": "https://github.com/valor-software/ng2-tree",
+  "keywords": [
+    "tree",
+    "ng2",
+    "angular2",
+    "ng2-tree",
+    "branch",
+    "tree-view",
+    "branchy",
+    "angular2-tree-view",
+    "expand",
+    "collapse",
+    "recursive"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "rychkog",
+      "email": "rychko.georgiy@gmail.com"
+    }
+  ],
+  "name": "ng2-tree",
+  "optionalDependencies": {},
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/valor-software/ng2-tree.git"
+  },
+  "scripts": {
+    "build:demo": "ng build",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -p angular",
+    "clean": "rimraf coverage build dist dist-demo bundles factories .publish",
+    "compile": "ngc -p tsconfig-aot.json && node umd-bundler.js",
+    "e2e": "ng e2e",
+    "github-release": "conventional-github-releaser -p angular",
+    "lint": "ng lint --fix --type-check",
+    "post:publish": "npm run build:demo && gh-pages -d dist-demo",
+    "postversion": "git push origin master && git push --tags && npm run github-release && node publish.js",
+    "pre:publish": "npm run clean && npm run test && npm run compile && mkdir -p dist && cp -R src/styles.css README.md media dist",
+    "preversion": "npm run lint && npm test",
+    "start": "ng serve",
+    "test": "ng test -sr",
+    "test:cov": "ng test -sr -cc",
+    "test:w": "ng test -w",
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "webdriver-update": "node ./node_modules/protractor/bin/webdriver-manager update"
+  },
+  "version": "2.0.0-alpha.8"
+}

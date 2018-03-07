@@ -1,0 +1,90 @@
+<h5>{{title}}</h5>
+<hr />
+
+<alert></alert>
+<form *ngIf="user" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="form-group col-4">
+            <label for="user.FirstName">First Name</label>
+            <input type="text" id="FirstName" class="form-control" formControlName="FirstName" >
+
+            <div *ngIf="formErrors.FirstName" class="alert alert-danger">
+                {{ formErrors.FirstName }}
+            </div>
+        </div>
+
+        <div class="form-group col-4">
+            <label for="user.LastName">Last Name</label>
+            <input type="text" id="LastName" class="form-control" formControlName="LastName" >
+
+            <div *ngIf="formErrors.LastName" class="alert alert-danger">
+                {{ formErrors.LastName }}
+            </div>
+        </div>
+
+        <div class="form-group col-4" *ngIf="profiles">
+            <label for="user.UserProfileId">Profile</label>
+            <select id="UserProfileId" name="UserProfileId" class="form-control" #profile formControlName="UserProfileId">
+                <option value="" disabled selected>Select a Profile...</option>
+                <option *ngFor="let profile of profiles" [value]="profile.UserProfileId" [selected]="profile.UserProfileId == user.UserProfileId">{{profile.ProfileName}}</option>
+            </select>
+
+            <div *ngIf="formErrors.UserProfileId" class="alert alert-danger">
+                {{ formErrors.UserProfileId }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-12">
+            <label for="user.Email">Email</label>
+            <input type="text" id="Email" class="form-control" formControlName="Email" >
+
+            <div *ngIf="formErrors.Email" class="alert alert-danger">
+                {{ formErrors.Email }}
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="form-group col-4">
+            <label for="user.Username">Username</label>
+            <input type="text" id="Username" class="form-control" formControlName="Username" >
+
+            <div *ngIf="formErrors.Username" class="alert alert-danger">
+                {{ formErrors.Username }}
+            </div>
+        </div>
+
+        <div class="form-group col-4">
+            <label for="user.Password">Password</label>
+            <input type="password" id="Password" class="form-control" formControlName="Password" >
+
+            <div *ngIf="formErrors.Password" class="alert alert-danger">
+                {{ formErrors.Password }}
+            </div>
+        </div>
+
+        <div class="form-group col-4">
+            <label for="user.ConfirmPassword">Confirm Password</label>
+            <input type="password" id="ConfirmPassword" class="form-control" formControlName="ConfirmPassword" >
+
+            <div *ngIf="userForm.controls.ConfirmPassword.errors?.MatchPassword" class="alert alert-danger">
+                Password not match
+            </div>
+        </div>
+    </div>    
+
+    <div class="row pull-right">
+        <button type="button" class="btn btn-danger"
+            (click)="goBack()"><i class="fa fa-arrow-left"></i> Back</button>
+        &nbsp;
+        <button *ngIf="userId" type="button" class="btn btn-primary"
+            (click)="addNew()"><i class="fa fa-plus-circle"></i> New User</button>
+        &nbsp;
+        <button type="submit" class="btn btn-success"
+            [disabled]="!userForm.valid"><i class="fa fa-thumbs-o-up"></i> Submit</button>            
+        <p>
+    </div>
+</form>  
+

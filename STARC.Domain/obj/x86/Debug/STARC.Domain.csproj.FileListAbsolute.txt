@@ -1,0 +1,5 @@
+C:\Users\rgoes\source\repos\starc-40\STARC.Domain\bin\x86\Debug\STARC.Domain.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Domain\bin\x86\Debug\STARC.Domain.pdb
+C:\Users\rgoes\source\repos\starc-40\STARC.Domain\obj\x86\Debug\STARC.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Domain\obj\x86\Debug\STARC.Domain.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Domain\obj\x86\Debug\STARC.Domain.pdb

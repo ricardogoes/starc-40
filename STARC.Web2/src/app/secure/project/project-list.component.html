@@ -1,0 +1,57 @@
+<h5>{{title}}</h5>
+<hr />
+<alert></alert>
+<div class="row"> 
+    <div class="col-md-9">
+        <button class="btn btn-success" (click)="addNew()">
+            <i class="fa fa-plus-circle"></i>
+            New Project
+        </button>
+    </div>   
+    <div class="form-group">
+        <input type="text" name="Search" class="form-control" title="Search" placeholder="Search By Name..."
+            [(ngModel)]="table.searchValue.Name"/>
+    </div>   
+</div>
+<div class="row">    
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>Finish Date</th>
+                <th>Status</th>
+                <th>Last Modified By</th>
+                <th>Last Modified Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let project of table.itemsOnCurrentPage" class="{{project.Status ? '' : 'alert alert-danger'}}">                    
+                <td>{{project.ProjectId}}</td>
+                <td>{{project.Name}}</td>
+                <td>{{project.StartDate | date:'dd/MM/yyyy'}}</td>
+                <td>{{project.FinishDate | date:'dd/MM/yyyy'}}</td>
+                <td>{{project.Status | status}}</td>
+                <td>{{project.LastUpdatedName}}</td>
+                <td>{{project.LastUpdatedDate | date:'dd/MM/yyyy hh:mm:ss'}}</td>
+                <td class = "pull-right">
+                    
+                    <button *ngIf="project.Status" class="btn btn-primary"
+                        (click)="edit(project)" title="Edit Project"><i class="fa fa-pencil-square-o"></i></button>
+                    <button *ngIf="project.Status" class="btn btn-primary"
+                        (click)="associateUsersTo(project)" title="Associate users to project"><i class="fa fa-user-o"></i></button>
+                    <button class="{{project.Status ? 'btn btn-danger' : 'btn btn-success'}}"
+                        (click)="changeStatus(project.ProjectId)" title="{{project.Status ? 'Inactivate Project' : 'changeStatus Project'}}">
+                            <i class="fa {{project.Status ? 'fa fa-ban' : 'fa fa-check-circle-o'}}"></i>
+                    </button>
+                </td>                    
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<pagination [maxPageIndex]="table.maxPageIndex" 
+            (pageNumberChanged)="table.currentPageIndex = $event">
+</pagination>

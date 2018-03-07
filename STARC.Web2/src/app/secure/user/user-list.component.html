@@ -1,0 +1,55 @@
+<h5>{{title}}</h5>
+<hr />
+<alert></alert>
+<div class="row"> 
+    <div class="col-md-9">
+        <button class="btn btn-success" (click)="addNew()">
+            <i class="fa fa-plus-circle"></i>
+            New User
+        </button>
+    </div>   
+    <div class="form-group">
+        <input type="text" name="Search" class="form-control" title="Search" placeholder="Search By Name..."
+            [(ngModel)]="table.searchValue.FirstName"/>
+    </div>   
+</div>
+<div class="row">    
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Profile</th>
+                <th>Status</th>
+                <th>Last Updated By</th>
+                <th>Last Updated Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of table.itemsOnCurrentPage" class="{{user.Status ? '' : 'alert alert-danger'}}">                    
+                <td>{{user.UserId}}</td>
+                <td>{{user.FirstName}}</td>
+                <td>{{user.LastName}}</td>
+                <td>{{user.ProfileName}}</td>
+                <td>{{user.Status | status}}</td>
+                <td>{{user.LastUpdatedName}}</td>
+                <td>{{user.LastUpdatedDate | date: 'dd/MM/yyyy hh:mm:ss'}}</td>
+                <td class = "pull-right">
+                    
+                    <button *ngIf = "user.Status" class="btn btn-primary"
+                        (click)="edit(user)" title="Edit User"><i class="fa fa-pencil-square-o"></i></button>
+                    <button class="{{user.Status ? 'btn btn-danger' : 'btn btn-success'}}"
+                        (click)="changeStatus(user.UserId)" title="{{user.Status ? 'Inactivate User' : 'changeStatus User'}}">
+                            <i class="fa {{user.Status ? 'fa fa-ban' : 'fa fa-check-circle-o'}}"></i>
+                    </button>
+                </td>                    
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<pagination [maxPageIndex]="table.maxPageIndex" 
+            (pageNumberChanged)="table.currentPageIndex = $event">
+</pagination>

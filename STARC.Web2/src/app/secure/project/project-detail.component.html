@@ -1,0 +1,64 @@
+<h5>{{title}}</h5>
+<hr />
+
+<alert></alert>
+<form *ngIf="project" [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="form-group col-12">
+            <label for="project.Name">Name</label>
+            <input type="text" id="Name" class="form-control" formControlName="Name" required >
+
+            <div *ngIf="formErrors.Name" class="alert alert-danger">
+                {{ formErrors.Name }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-12" >
+            <label for="project.Description">Description</label>
+            <textarea id="Description" class="form-control" formControlName="Description" rows="3" ></textarea>
+
+            <div *ngIf="formErrors.Description" class="alert alert-danger">
+                {{ formErrors.Description }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-3">
+            <label for="project.StartDate">StartDate</label>
+            <input type="date" id="StartDate" class="form-control" formControlName="StartDate" useValueAsDate>
+        </div>
+
+        <div class="form-group col-3">
+            <label for="project.FinishDate">FinishDate</label>
+            <input type="date" id="FinishDate" class="form-control" formControlName="FinishDate" useValueAsDate>
+        </div>
+
+        <div class="form-group col-6" *ngIf="owners">
+            <label for="project.Responsable">Owner</label>
+            <select id="OwnerId" name="OwnerId" class="form-control" #owner formControlName="OwnerId" >
+                <option value="" disabled selected>Select a Owner...</option>
+                <option *ngFor="let user of owners" [value]="user.UserId" [selected]="user.UserId == project.OwnerId">{{user.FirstName}} {{user.LastName}}</option>
+            </select>
+
+            <div *ngIf="formErrors.OwnerId" class="alert alert-danger">
+                {{ formErrors.OwnerId }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row pull-right">
+        <button type="button" class="btn btn-danger"
+            (click)="goBack()"><i class="fa fa-arrow-left"></i> Back</button>
+        &nbsp;
+        <button *ngIf="projectId" type="button" class="btn btn-primary"
+            (click)="addNew()"><i class="fa fa-plus-circle"></i> New Project</button>
+        &nbsp;
+        <button type="submit" class="btn btn-success"
+            [disabled]="!projectForm.valid"><i class="fa fa-thumbs-o-up"></i> Submit</button>            
+        <p>
+    </div>
+</form>  
+

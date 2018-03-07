@@ -1,0 +1,43 @@
+<h5>{{title}}</h5>
+<hr />
+<alert></alert>
+<form *ngIf="customer" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="customer.Name">Name</label>
+        <input type="text" id="Name" class="form-control" formControlName="Name" >
+
+        <div *ngIf="formErrors.Name" class="alert alert-danger">
+            {{ formErrors.Name }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="customer.DocumentId">CPF/CNPJ (only numbers)</label>
+        <input type="text" id="DocumentId" [ngModel]="txtDocumentId" class="form-control" 
+            (keyup)="replaceDocumentId($event.target.value)" name="DocumentId" formControlName="DocumentId" validateCpfCnpj>        
+        
+        <div *ngIf="formErrors.DocumentId" class="alert alert-danger">
+            {{ formErrors.DocumentId }}
+        </div>        
+    </div>
+
+    <div class="form-group">
+        <label for="customer.Address">Address</label>
+        <input type="text" id="Address" class="form-control" formControlName="Address" >
+
+        <div *ngIf="formErrors.Address" class="alert alert-danger">
+            {{ formErrors.Address }}
+        </div>
+    </div>
+
+    <div class="row pull-right">
+        <button type="button" class="btn btn-danger"
+            (click)="goBack()"><i class="fa fa-arrow-left"></i> Back</button>
+        &nbsp;
+        <button *ngIf="customerId" type="button" class="btn btn-primary"
+            (click)="addNew()"><i class="fa fa-plus-circle"></i> New Customer</button>
+        &nbsp;
+        <button type="submit" class="btn btn-success"
+            [disabled]="!customerForm.valid"><i class="fa fa-thumbs-o-up"></i> Submit</button>            
+    </div>
+</form>  

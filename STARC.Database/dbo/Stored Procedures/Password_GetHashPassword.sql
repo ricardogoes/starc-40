@@ -1,0 +1,16 @@
+﻿CREATE PROCEDURE [dbo].[Password_GetHashPassword](@UserId BIGINT)
+AS
+BEGIN
+	SET NOCOUNT ON
+
+	BEGIN TRY
+		SELECT PasswordHash
+		FROM [User] (NOLOCK)
+		WHERE UserId = @UserId
+	END TRY
+	BEGIN CATCH
+		SELECT
+			ERROR_NUMBER() AS ErrorNumber,
+			ERROR_MESSAGE() AS ErrorMessage
+	END CATCH
+END

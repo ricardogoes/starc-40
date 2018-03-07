@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STARC.Infra.Data", "STARC.Infra.Data\STARC.Infra.Data.csproj", "{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STARC.Domain", "STARC.Domain\STARC.Domain.csproj", "{476BAED6-F52F-4B73-91D5-75095DF4136A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STARC.Application", "STARC.Application\STARC.Application.csproj", "{10B6895D-428E-42B1-B233-EE7747920282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STARC.Tests", "STARC.Tests\STARC.Tests.csproj", "{E0610CE0-C85C-46AB-8577-EABC632A3EA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STARC.Api", "STARC.Api\STARC.Api.csproj", "{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "STARC.Web2", "STARC.Web2\", "{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63148"
+		Debug.AspNetCompiler.PhysicalPath = "STARC.Web2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63148\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63148"
+		Release.AspNetCompiler.PhysicalPath = "STARC.Web2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63148\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63148"
+		SlnRelativePath = "STARC.Web2\"
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "STARC.Database", "STARC.Database\STARC.Database.sqlproj", "{27370CAB-5F0C-41E4-94DC-932C591797F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STARC.Infra.CrossCutting", "STARC.Infra.CrossCutting\STARC.Infra.CrossCutting.csproj", "{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Debug|x86.ActiveCfg = Debug|x86
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Debug|x86.Build.0 = Debug|x86
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Release|x86.ActiveCfg = Release|x86
+		{8A9BE209-C7DA-4DA5-9D6E-E1B15143C7C0}.Release|x86.Build.0 = Release|x86
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Debug|x86.ActiveCfg = Debug|x86
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Debug|x86.Build.0 = Debug|x86
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Release|x86.ActiveCfg = Release|x86
+		{476BAED6-F52F-4B73-91D5-75095DF4136A}.Release|x86.Build.0 = Release|x86
+		{10B6895D-428E-42B1-B233-EE7747920282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B6895D-428E-42B1-B233-EE7747920282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B6895D-428E-42B1-B233-EE7747920282}.Debug|x86.ActiveCfg = Debug|x86
+		{10B6895D-428E-42B1-B233-EE7747920282}.Debug|x86.Build.0 = Debug|x86
+		{10B6895D-428E-42B1-B233-EE7747920282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B6895D-428E-42B1-B233-EE7747920282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B6895D-428E-42B1-B233-EE7747920282}.Release|x86.ActiveCfg = Release|x86
+		{10B6895D-428E-42B1-B233-EE7747920282}.Release|x86.Build.0 = Release|x86
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Debug|x86.ActiveCfg = Debug|x86
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Debug|x86.Build.0 = Debug|x86
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Release|x86.ActiveCfg = Release|x86
+		{E0610CE0-C85C-46AB-8577-EABC632A3EA8}.Release|x86.Build.0 = Release|x86
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Debug|x86.ActiveCfg = Debug|x86
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Debug|x86.Build.0 = Debug|x86
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Release|x86.ActiveCfg = Release|x86
+		{CFF80BA9-11D3-4A68-BE3C-1C95E963C2D8}.Release|x86.Build.0 = Release|x86
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Release|x86.ActiveCfg = Debug|Any CPU
+		{9E3C3ACA-B8A6-41AE-ACA0-3674D43580A4}.Release|x86.Build.0 = Debug|Any CPU
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Debug|x86.ActiveCfg = Debug|x86
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Debug|x86.Build.0 = Debug|x86
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Debug|x86.Deploy.0 = Debug|x86
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|x86.ActiveCfg = Release|x86
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|x86.Build.0 = Release|x86
+		{27370CAB-5F0C-41E4-94DC-932C591797F6}.Release|x86.Deploy.0 = Release|x86
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Debug|x86.ActiveCfg = Debug|x86
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Debug|x86.Build.0 = Debug|x86
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Release|x86.ActiveCfg = Release|x86
+		{DE38D6C5-44C5-4C92-AE9A-D21013FBB8F9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1070AE58-D25A-46C8-9E4D-139C5054F85E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="row justify-content-center align-items-center">    
+    <div class="col-md-6 col-md-offset-3 ">
+        
+        <h5>{{title}}</h5>
+        <hr />
+        <alert></alert>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="userLogin.Username">Name</label>
+                <input type="text" id="Username" class="form-control" formControlName="Username" required >
+
+                <div *ngIf="formErrors.Username" class="alert alert-danger">
+                    {{ formErrors.Username }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="userLogin.Password">Password</label>
+                <input type="password" id="Password" class="form-control" formControlName="Password" required >
+
+                <div *ngIf="formErrors.Password" class="alert alert-danger">
+                    {{ formErrors.Password }}
+                </div>
+            </div>
+            <div class="form-group pull-right">
+                <button type="submit" class="btn btn-success"
+                    [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>    
+            </div>
+        </form>
+    </div>
+</div>

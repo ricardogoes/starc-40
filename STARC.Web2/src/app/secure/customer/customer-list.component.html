@@ -1,0 +1,56 @@
+<h5>Customers</h5>
+<hr />
+<alert></alert>
+<div class="row"> 
+    <div class="col-md-9">
+        <button class="btn btn-success" (click)="addNew()">
+            <i class="fa fa-plus-circle"></i>
+            New Customer
+        </button>
+    </div>   
+    <div class="form-group">
+        <input type="text" name="Search" class="form-control" title="Search" placeholder="Search By Name..."
+            [(ngModel)]="table.searchValue.Name"/>
+    </div>   
+</div>
+<div class="row"  *ngIf="customers.length > 0">    
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Document Id</th>                
+                <th>Status</th>
+                <th>Last Modified By</th>
+                <th>Last Modified Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of table.itemsOnCurrentPage" class="{{customer.Status ? '' : 'alert alert-danger'}}">
+                <td>{{customer.CustomerId}}</td>
+                <td>{{customer.Name}}</td>
+                <td>{{customer.DocumentId | cpfCnpj}}</td>                
+                <td>{{customer.Status | status}}</td>
+                <td>{{customer.LastUpdatedName}}</td>
+                <td>{{customer.LastUpdatedDate| date: 'dd/MM/yyyy hh:mm:ss'}}</td>
+                <td class = "pull-right">
+                    
+                    <button *ngIf="customer.Status" class="btn btn-primary"
+                        (click)="edit(customer)" title="Edit Customer"><i class="fa fa-pencil-square-o"></i></button>
+                    <button *ngIf="customer.Status" class="btn btn-primary"
+                        (click)="openProjectsFrom(customer)" title="Open Projects"><i class="fa fa-folder-open-o"></i></button>
+                    <button *ngIf="customer.Status" class="btn btn-primary"
+                        (click)="openUsersFrom(customer)" title="Open Users"><i class="fa fa-user-o"></i></button>
+                    <button class="{{customer.Status ? 'btn btn-danger' : 'btn btn-success'}}"
+                        (click)="changeStatus(customer.CustomerId)" title="{{customer.Status ? 'Inactivate Customer' : 'changeStatus Customer'}}">
+                            <i class="fa {{customer.Status ? 'fa fa-ban' : 'fa fa-check-circle-o'}}"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<pagination [maxPageIndex]="table.maxPageIndex" 
+            (pageNumberChanged)="table.currentPageIndex = $event">
+</pagination>

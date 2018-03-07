@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>STARC.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{27370cab-5f0c-41e4-94dc-932c591797f6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>STARC.Database</RootNamespace>
+    <AssemblyName>STARC.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\UsersInProjects.sql" />
+    <Build Include="dbo\Tables\UserProfile.sql" />
+    <Build Include="dbo\Tables\Customer.sql" />
+    <Build Include="dbo\Tables\Project.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Stored Procedures\UserProfile_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\UserProfile_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_Add.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_GetByProject.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_GetByUser.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\UsersInProjects_GetByCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_GetByDocumentId.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_ChangeStatus.sql" />
+    <Build Include="dbo\Stored Procedures\Project_ChangeStatus.sql" />
+    <Build Include="dbo\Stored Procedures\User_ChangeStatus.sql" />
+    <Build Include="dbo\Stored Procedures\User_GetByNotInProject.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\Project_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Project_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Project_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\Project_GetByCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\User_GetByUsernameAndPassword.sql" />
+    <Build Include="dbo\Stored Procedures\User_GetByCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\User_Add.sql" />
+    <Build Include="dbo\Stored Procedures\User_Update.sql" />
+    <Build Include="dbo\Stored Procedures\User_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\User_GetByUsername.sql" />
+    <Build Include="dbo\Stored Procedures\Customer_GetActive.sql" />
+    <Build Include="dbo\Stored Procedures\Project_GetActiveByCustomer.sql" />
+    <Build Include="dbo\Tables\TestPlan.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_Add.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_ChangeStatus.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_GetActiveByProject.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_GetByProject.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\TestPlan_Update.sql" />
+    <Build Include="dbo\Tables\TestSuite.sql" />
+    <Build Include="dbo\Tables\TestCase.sql" />
+    <Build Include="dbo\Stored Procedures\TestSuite_Add.sql" />
+    <Build Include="dbo\Stored Procedures\TestSuite_GetById.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\Stored Procedures\UsersInProjects_GetByUserAndProject.sql" />
+    <None Include="dbo\Stored Procedures\Password_GetHashPassword.sql" />
+    <None Include="dbo\Stored Procedures\TestSuite_Delete.sql" />
+    <None Include="dbo\Stored Procedures\TestCase_Add.sql" />
+    <None Include="dbo\Stored Procedures\TestCase_Update.sql" />
+    <None Include="dbo\Stored Procedures\TestSuite_Update.sql" />
+    <None Include="dbo\Stored Procedures\TestCase_GetByTestPlan.sql" />
+    <None Include="dbo\Stored Procedures\TestCase_GetById.sql" />
+    <None Include="dbo\Stored Procedures\TestCase_ChangeStatus.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="STARC.Database.refactorlog" />
+  </ItemGroup>
+</Project>

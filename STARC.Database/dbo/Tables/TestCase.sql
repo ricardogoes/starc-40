@@ -1,0 +1,19 @@
+﻿CREATE TABLE [TestCase](
+	TestCaseId BIGINT IDENTITY,
+	TestSuiteId BIGINT NOT NULL,
+	Name VARCHAR(200) NOT NULL,	
+	Type NVARCHAR(30) NOT NULL,
+	Description VARCHAR(1000) NOT NULL,
+	PreConditions VARCHAR(1000) NULL,
+	PosConditions VARCHAR(1000) NULL,
+	ExpectedResult VARCHAR(1000) NULL,
+	Status BIT NOT NULL,
+	CreatedBy BIGINT NOT NULL,
+	CreatedDate DATETIME NOT NULL,
+	LastUpdatedBy BIGINT NOT NULL,
+	LastUpdatedDate DATETIME NOT NULL,
+	CONSTRAINT pkTestCase PRIMARY KEY([TestCaseId]),
+	CONSTRAINT fkTestCaseTestSuite FOREIGN KEY(TestSuiteId) REFERENCES TestSuite(TestSuiteId),
+	CONSTRAINT fkTestCaseCreatedBy FOREIGN KEY(CreatedBy) REFERENCES [User](UserId),
+	CONSTRAINT fkTestCaseUpdatedBy FOREIGN KEY(LastUpdatedBy) REFERENCES [User](UserId)
+)

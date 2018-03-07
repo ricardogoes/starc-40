@@ -1,0 +1,10 @@
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\STARC.Infra.CrossCutting.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\STARC.Infra.CrossCutting.pdb
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\AutoMapper.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\STARC.Domain.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\STARC.Domain.pdb
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\bin\x86\Debug\AutoMapper.xml
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\obj\x86\Debug\STARC.Infra.CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\obj\x86\Debug\STARC.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\obj\x86\Debug\STARC.Infra.CrossCutting.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Infra.CrossCutting\obj\x86\Debug\STARC.Infra.CrossCutting.pdb

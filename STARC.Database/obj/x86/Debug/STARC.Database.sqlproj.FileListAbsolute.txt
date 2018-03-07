@@ -1,0 +1,9 @@
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\bin\Debug\STARC.Database.dacpac
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\bin\Debug\STARC.Database.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\bin\Debug\STARC.Database.pdb
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\Model.xml
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\refactor.xml
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\postdeploy.sql
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\predeploy.sql
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\STARC.Database.dll
+C:\Users\rgoes\source\repos\starc-40\STARC.Database\obj\x86\Debug\STARC.Database.pdb

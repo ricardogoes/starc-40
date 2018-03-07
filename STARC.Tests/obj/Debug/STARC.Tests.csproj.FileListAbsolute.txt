@@ -1,0 +1,2 @@
+C:\Users\rgoes\source\repos\starc-40\STARC.Tests\obj\Debug\STARC.Tests.csprojResolveAssemblyReference.cache
+C:\Users\rgoes\source\repos\starc-40\STARC.Tests\obj\Debug\STARC.Tests.csproj.CoreCompileInputs.cache
